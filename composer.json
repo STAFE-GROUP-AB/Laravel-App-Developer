@@ -1,0 +1,79 @@
+{
+    "name": "stafe-group-ab/laravel-app-developer",
+    "description": "Application Designer MCP Server for Laravel Application Developer - Researches features, compares with market leaders, and generates development plans",
+    "keywords": [
+        "dev",
+        "laravel",
+        "ai",
+        "mcp",
+        "application-design",
+        "feature-research",
+        "development-planning"
+    ],
+    "homepage": "https://github.com/STAFE-GROUP-AB/Laravel-App-Developer",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/STAFE-GROUP-AB/Laravel-App-Developer/issues",
+        "source": "https://github.com/STAFE-GROUP-AB/Laravel-App-Developer"
+    },
+    "require": {
+        "php": "^8.1|^8.2|^8.3",
+        "guzzlehttp/guzzle": "^7.9",
+        "illuminate/console": "^10.0|^11.0|^12.0",
+        "illuminate/contracts": "^10.0|^11.0|^12.0",
+        "illuminate/filesystem": "^10.0|^11.0|^12.0",
+        "illuminate/routing": "^10.0|^11.0|^12.0",
+        "illuminate/support": "^10.0|^11.0|^12.0",
+        "laravel/mcp": "^0.1.0",
+        "laravel/prompts": "^0.1.9|^0.3",
+        "symfony/finder": "^6.0|^7.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.14|^1.23",
+        "mockery/mockery": "^1.6",
+        "orchestra/testbench": "^8.22.0|^9.0|^10.0",
+        "pestphp/pest": "^2.0|^3.0",
+        "phpstan/phpstan": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "StafeGroup\\LaravelAppDeveloper\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.x-dev"
+        },
+        "laravel": {
+            "providers": [
+                "StafeGroup\\LaravelAppDeveloper\\LaravelAppDeveloperServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "lint": [
+            "vendor/bin/pint",
+            "vendor/bin/phpstan"
+        ],
+        "test": [
+            "vendor/bin/pest"
+        ],
+        "check": [
+            "@composer lint",
+            "@composer test"
+        ]
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
