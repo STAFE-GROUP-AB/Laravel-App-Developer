@@ -49,9 +49,41 @@ Laravel App Developer is a powerful Model Context Protocol (MCP) server designed
 
 ### Install via Composer
 
+**Note**: If you get a "package not found" error, the package may not be submitted to Packagist yet. See [Alternative Installation](#alternative-installation) below.
+
 ```bash
 composer require stafe-group-ab/laravel-app-developer --dev
 ```
+
+### Alternative Installation
+
+If the package is not yet available on Packagist, you can install it directly from GitHub:
+
+```bash
+# Add the repository to your composer.json
+composer config repositories.laravel-app-developer vcs https://github.com/STAFE-GROUP-AB/Laravel-App-Developer
+
+# Install the package
+composer require stafe-group-ab/laravel-app-developer:^0.1 --dev
+```
+
+Or add this to your `composer.json` manually:
+
+```json
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/STAFE-GROUP-AB/Laravel-App-Developer"
+        }
+    ],
+    "require-dev": {
+        "stafe-group-ab/laravel-app-developer": "^0.1"
+    }
+}
+```
+
+Then run `composer install`.
 
 ### Install the MCP Server
 

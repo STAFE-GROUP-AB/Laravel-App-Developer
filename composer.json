@@ -1,5 +1,6 @@
 {
     "name": "stafe-group-ab/laravel-app-developer",
+    "type": "library",
     "description": "Application Designer MCP Server for Laravel Application Developer - Researches features, compares with market leaders, and generates development plans",
     "keywords": [
         "dev",
